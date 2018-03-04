@@ -1,0 +1,21 @@
+#!/bin/python3
+
+import sys
+
+def divisibleSumPairs(n, k, ar):
+    sum=0
+    count=0
+    for i in range(len(ar)):
+        for j in range(i+1,len(ar)):
+                sum=ar[i]+ar[j]
+                if sum % k == 0:
+                    count+=1
+    print(count)
+                    
+            
+n, k = input().strip().split(' ')
+n, k = [int(n), int(k)]
+ar = list(map(int, input().strip().split(' ')))
+#result = 
+divisibleSumPairs(n, k, ar)
+#print(result)
